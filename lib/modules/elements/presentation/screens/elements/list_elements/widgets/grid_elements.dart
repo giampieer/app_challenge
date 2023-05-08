@@ -40,7 +40,7 @@ class GridElements extends StatelessWidget {
                                         width: 300,
                                         height: 200,
                                         child: Image.asset(
-                                          'assets/images/rectangle-no-image.png',
+                                          'assets/rectangle-no-image.png',
                                         ),
                                       );
                                     },

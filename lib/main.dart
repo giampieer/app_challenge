@@ -1,5 +1,6 @@
 import 'package:app_challenge/core/network/api_network.dart';
 import 'package:app_challenge/core/provider/state_provider.dart';
+import 'package:app_challenge/core/utils/router_custom.dart';
 import 'package:app_challenge/modules/elements/presentation/screens/home/home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -37,12 +38,12 @@ class MyAppState extends State<MyApp> with WidgetsBindingObserver {
         providers: [
           ChangeNotifierProvider(create: (_) => mGlobalProvider),
         ],
-        child: MaterialApp(
+        child: MaterialApp.router(
           useInheritedMediaQuery: true,
           supportedLocales: const [Locale('en')],
           debugShowCheckedModeBanner: false,
           title: 'App Challenge',
-          home: HomeScreen(),
+          routerConfig: RouterCustom.router,
         ));
   }
 
